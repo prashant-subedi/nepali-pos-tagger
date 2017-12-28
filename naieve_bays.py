@@ -41,7 +41,7 @@ for i in corpus:
 X = [i[0] for i in Data]
 Y = [i[1] for i in Data]
 #print(t)
-split = len(corpus)-len(corpus)//20
+split = len(corpus)-len(corpus)//5
 
 
 tf = CountVectorizer()
