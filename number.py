@@ -4,7 +4,6 @@ from nltk.corpus import  indian
 import re
 from  nltk.corpus import brown
 
-print(count)
 with open("corpus/00ne_pos.txt") as corpus0:
     for i in corpus0:
         i=i[:-1]
