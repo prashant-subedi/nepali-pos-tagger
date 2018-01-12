@@ -2,7 +2,9 @@ corpus =[]
 from nltk import word_tokenize
 from nltk.corpus import  indian
 import re
+from  nltk.corpus import brown
 
+print(count)
 with open("corpus/00ne_pos.txt") as corpus0:
     for i in corpus0:
         i=i[:-1]
@@ -33,6 +35,7 @@ with open("corpus/02ne_pos.txt") as corpus2:
             remove_space.append(i.strip())
         corpus.append([(i, j[1:-1]) for i, j in zip(remove_space, tags)])
 print(len(corpus))
+
 b=set()
 #To find the number of classes in the dataset
 for i in corpus:
