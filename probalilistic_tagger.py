@@ -20,7 +20,7 @@ for i in test_dict:
         if heighest_probabilty[i[0]] == i[1]:
             hit+=1
         else:
-            if i[0] in heighest_probabilty[i[0]]:
+            if i[1] in statistic[i[0]]:
                 ambiguity_miss+=1
             miss+=1
     except KeyError:
