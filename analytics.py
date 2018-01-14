@@ -37,12 +37,12 @@ def load_analytics():
                 s+=1
 
     for i in amb_words.items():
-        print(i)
+        # print(i)
         pass
 
-    print("Amb Class:", s)
-    print("Total Ambigious word occurences:", sum(amb_class.values()))
-    print("Total:",sum([len(i) for i in data]))
+    # print("Amb Class:", s)
+    # print("Total Ambigious word occurences:", sum(amb_class.values()))
+    # print("Total:",sum([len(i) for i in data]))
     # for key, value in sorted(stat['को'].items(), key=lambda k:k[1], reverse= True ):
     #     print ("%s: %s" % (key, value))
     return stat
