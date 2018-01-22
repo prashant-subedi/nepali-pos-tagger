@@ -3,9 +3,9 @@ from  corpus import  load_corpus
 
 from sklearn.tree import  DecisionTreeClassifier
 
-X_train_raw, Y_train_raw = extract_feature(data=load_corpus())
+    X_train_raw, Y_train_raw = extract_feature(data=load_corpus())
 
-label_encoder,hot_encoder = set_encoder(Y_train_raw)
+    label_encoder,hot_encoder = set_encoder(Y_train_raw)
 
 X_train,Y_train = encode_features(X_train_raw,Y_train_raw,label_encoder,hot_encoder)
 

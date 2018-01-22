@@ -1,7 +1,7 @@
 import corpus
 def load_analytics():
     s = 0
-    data = corpus.load_corpus()
+    data = corpus.load_corpus(all=True)
     # print(len(data))
     stat = {}
     #s= 0
@@ -36,9 +36,10 @@ def load_analytics():
                 #print(k, v)
                 s+=1
 
-    for i in amb_words.items():
+    print(s)
+    # for i in amb_words.items():
         # print(i)
-        pass
+
 
     # print("Amb Class:", s)
     # print("Total Ambigious word occurences:", sum(amb_class.values()))
@@ -46,3 +47,6 @@ def load_analytics():
     # for key, value in sorted(stat['को'].items(), key=lambda k:k[1], reverse= True ):
     #     print ("%s: %s" % (key, value))
     return stat
+
+
+load_analytics()

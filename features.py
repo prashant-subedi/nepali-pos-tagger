@@ -16,7 +16,6 @@ def data_or_empty(l,i):
         return "EMT"
 
 def extract_feature(data):
-
     X = []
     Y = []
     for i in data:
@@ -32,8 +31,6 @@ def extract_feature(data):
                  data_or_empty(i, x + 2),
                  data_or_empty(i, x + 3),
                  data_or_empty(i, x + 4),
-
-
                  ]
             )
             Y.append(y[1])
@@ -53,7 +50,6 @@ def set_encoder(Y):
 
 def encode_features(X,Y,label_encoder,hot_encoder):
     # Below is a Hack to include EMT in the encoding
-
     Y = label_encoder.transform(Y )
     # This is computationally expensive task
     X = np.array([label_encoder.transform(i) for i in X])
