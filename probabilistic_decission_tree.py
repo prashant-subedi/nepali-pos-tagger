@@ -245,4 +245,4 @@ for i in test:
         else:
             miss+=1
 
-print("Accuracy  for 2 iteration of decission tree", hit/(hit+miss))
+print("Accuracy  for 3 iteration of decission tree", hit/(hit+miss))
