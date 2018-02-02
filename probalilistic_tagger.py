@@ -24,6 +24,7 @@ for i in test_dict:
         else:
             if i[1] in statistic[i[0]]:
                 ambiguity_miss+=1
+                miss+=1
             else:
                 if len(statistic[i[0]].keys())==1:
                     a+=1

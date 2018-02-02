@@ -1,7 +1,7 @@
 import corpus
 def load_analytics():
     s = 0
-    data = corpus.load_corpus(all=True)
+    data = corpus.load_corpus()
     # print(len(data))
     stat = {}
     #s= 0
@@ -47,6 +47,3 @@ def load_analytics():
     # for key, value in sorted(stat['को'].items(), key=lambda k:k[1], reverse= True ):
     #     print ("%s: %s" % (key, value))
     return stat
-
-
-load_analytics()

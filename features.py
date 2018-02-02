@@ -42,10 +42,10 @@ def extract_feature(data):
 
 def set_encoder(Y):
     label_encoder = LabelEncoder()
-    Y = label_encoder.fit_transform(Y + ["EMT"])
-    Y = Y[:-1]
+    Z = Y + ["EMT","UNK"]
+    Z = label_encoder.fit_transform(Z)
     hot_encoder = OneHotEncoder(sparse=False)
-    Y = hot_encoder.fit(Y.reshape(-1, 1))
+    Z = hot_encoder.fit(Z.reshape(-1, 1))
     return label_encoder,hot_encoder
 
 def encode_features(X,Y,label_encoder,hot_encoder):

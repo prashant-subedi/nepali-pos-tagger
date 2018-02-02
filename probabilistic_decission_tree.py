@@ -40,6 +40,10 @@ class AmbigiousClass:
     def get_clf(self):
         return self.clf
 
+    def __str__(self):
+        return "".join(self.word_list)
+
+    #def get_
 from sklearn.tree import DecisionTreeClassifier
 statistic = analytics.load_analytics()
 heighest_probabilty = {}
@@ -52,6 +56,11 @@ X_train_raw, Y_train_raw = extract_feature(data=train)
 
 #Global label_encoder to encode X values
 global_label_encoder,global_hot_encoder = set_encoder(Y_train_raw)
+print("Training Global Classifer ....")
+X_train,Y_train = encode_features(X_train_raw,Y_train_raw,global_label_encoder,global_hot_encoder)
+global_clf = DecisionTreeClassifier()
+global_clf.fit(X_train,Y_train)
+print("Completed")
 
 # print(train)
 # Identify the ambiguity classes
@@ -69,19 +78,20 @@ for i in train:
             if cls_string not in amb_class:
                 amb_class[cls_string] = AmbigiousClass(cls_string)
             amb_class[cls_string].add_XY(
-                (data_or_empty(i,x - 3),
+                (data_or_empty(i, x - 4),
+                data_or_empty(i,x - 3),
                 data_or_empty(i,x - 2),
                 data_or_empty(i, x - 1),
                 data_or_empty(i, x + 1),
                 data_or_empty(i, x + 2),
-                data_or_empty(i, x  + 3)),
-                y[1]
+                data_or_empty(i, x  + 3),
+                data_or_empty(i, x + 4)),
+            y[1]
                 )
             amb_class[cls_string].add_word(y[0])
 
 
 amb_classifier = {}
-
 
 for i,j in amb_class.items():
     X_raw ,Y_raw = j.get_XY()
@@ -105,40 +115,134 @@ for i,j in amb_class.items():
         Z = np.append(Z, np.array(global_hot_encoder.transform(X[:, i].reshape(-1, 1))), axis=1)
 
     clf = DecisionTreeClassifier()
-    clf.fit(X,Z)
+    clf.fit(Z,Y)
     j.set_clf(clf)
+
+print(Z.shape)
+
+def get_labels(l,i):
+    try:
+        return  l[i]
+    except IndexError:
+        return "EMT"
+
+#Here we will classify the text:
+def classify_tokenized_sentence(words,itr = 0):
+    ## Initial Labeling Using Probablistic Tagger
+    labeled_string = list()
+    for i in words:
+        try:
+            labeled_string.append(heighest_probabilty[i])
+        except KeyError:
+            labeled_string.append("UNK")
+
+    #Now Applying the Hybrid Approach
+    # Now Applying the Hybrid Approach
+    for i in range(itr):
+        for e, i in enumerate(words):
+
+            X_raw = ((
+                get_labels(labeled_string, e - 4),
+                get_labels(labeled_string, e - 3),
+                get_labels(labeled_string, e - 2),
+                get_labels(labeled_string, e - 1),
+                get_labels(labeled_string, e + 1),
+                get_labels(labeled_string, e + 2),
+                get_labels(labeled_string, e + 3),
+                get_labels(labeled_string, e + 4),
+
+            ))
+            X = global_label_encoder.transform(X_raw)
+            X_one_hot = global_hot_encoder.transform(X.reshape(-1, 1))
+            X_one_hot = X_one_hot.reshape(1, -1)
+
+            try:
+                if len(statistic[i]) == 1:
+                    pass
+                else:
+                    amb_class_object = amb_class["-".join(sorted(statistic[i].keys()))]
+                    clf = amb_class_object.get_clf()
+
+                    # print(X_one_hot.shape)
+                    pre = clf.predict(X_one_hot)
+                    labeled_string[e] = amb_class_object.get_encoder()[0].inverse_transform([np.argmax(pre)])[0]
+            except:
+                pre = global_clf.predict(X_one_hot)
+                labeled_string[e] = global_label_encoder.inverse_transform([np.argmax(pre)])[0]
+
+    return labeled_string
+
+
+
 
 
 #Now We Will Do The Testing
-
 test = corpus.load_corpus(last=True)
-test_dict = []
-for i in test:
-    for j in i:
-        test_dict.append(j)
-
+#Error for no iteration
 hit = 0
 miss = 0
-unknwon = 0
-ambiguity_miss = 0
-unknwon_ambiguity = 0
-a = 1
 
-for i in test_dict:
-    try:
-        if len(statistic[i[0]]) == 1:
-            if heighest_probabilty[i[0]] == i[1]:
-                hit+=1
-            else:
-                miss+=1
+for i in test:
+    sentence = [j[0] for j in i]
+    tags_true = [j[1] for j in i]
+    tags_predicted = classify_tokenized_sentence(sentence)
+    for i in range(len(tags_true)):
+        if tags_true[i] == tags_predicted[i]:
+            hit+=1
         else:
-            if i[1] in statistic[i[0]]:
-                clf = amb_class["-".join(sorted(statistic[i[0]]))].get_clf()
-                print("")
-            else:
-                #No use of classifiying since the program not be able to classify
-                miss+=1
-    except KeyError:
-        miss+=1
-        unknwon+=1
+            miss+=1
 
+print("Accuracy for probalistic tagger", hit/(hit+miss))
+
+
+
+#Error for 1 iteration
+hit = 0
+miss = 0
+
+for i in test:
+    sentence = [j[0] for j in i]
+    tags_true = [j[1] for j in i]
+    tags_predicted = classify_tokenized_sentence(sentence,1)
+    for i in range(len(tags_true)):
+        if tags_true[i] == tags_predicted[i]:
+            hit+=1
+        else:
+            miss+=1
+
+print("Accuracy for 1 iteration of decission tree", hit/(hit+miss))
+
+
+#Error for 2 iteration
+hit = 0
+miss = 0
+
+for i in test:
+    sentence = [j[0] for j in i]
+    tags_true = [j[1] for j in i]
+    tags_predicted = classify_tokenized_sentence(sentence,2)
+    for i in range(len(tags_true)):
+        if tags_true[i] == tags_predicted[i]:
+            hit+=1
+        else:
+            miss+=1
+
+print("Accuracy  for 2 iteration of decission tree", hit/(hit+miss))
+
+
+
+#Error for 3 iteration
+hit = 0
+miss = 0
+
+for i in test:
+    sentence = [j[0] for j in i]
+    tags_true = [j[1] for j in i]
+    tags_predicted = classify_tokenized_sentence(sentence,3)
+    for i in range(len(tags_true)):
+        if tags_true[i] == tags_predicted[i]:
+            hit+=1
+        else:
+            miss+=1
+
+print("Accuracy  for 2 iteration of decission tree", hit/(hit+miss))
