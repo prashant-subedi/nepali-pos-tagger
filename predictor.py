@@ -58,7 +58,7 @@ class AmbigiousClass:
 
     #def get_
 from sklearn.tree import DecisionTreeClassifier
-train = corpus.load_corpus(test = TEST)
+train = corpus.load_corpus(all=True)
 statistic = analytics.load_analytics(train)
 heighest_probabilty = {}
 
@@ -190,7 +190,7 @@ def tokenizer(s):
     words = [x.strip() for x in s.split(" ") if x != ""]
     words_aug = []
     for i in words:
-        
+
         if "हरू" in i:
             words_aug.append(i.replace("हरू",""))
             words_aug.append("हरू")
