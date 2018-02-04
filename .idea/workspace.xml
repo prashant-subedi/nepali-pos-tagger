@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce62c76-0cc9-44c7-b70a-41fb1f2cb138" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dictionary.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics.py" afterPath="$PROJECT_DIR$/analytics.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corpus.py" afterPath="$PROJECT_DIR$/corpus.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/number.py" afterPath="$PROJECT_DIR$/number.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/probabilistic_decission_tree.py" afterPath="$PROJECT_DIR$/probabilistic_decission_tree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/predictor.py" afterPath="$PROJECT_DIR$/predictor.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,42 +31,8 @@
       <file leaf-file-name="probalilistic_tagger.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/probalilistic_tagger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="19" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="decission_trees.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/decission_trees.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="naieve_bays.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/naieve_bays.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="42" selection-end-column="9" />
-              <folding>
-                <element signature="e#11#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="analytics.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analytics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -86,11 +50,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="naieve_bays.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/naieve_bays.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="42" selection-end-column="9" />
+              <folding>
+                <element signature="e#11#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="corpus.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corpus.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="42" selection-end-column="17" />
+            <state relative-caret-position="225">
+              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -101,8 +77,8 @@
       <file leaf-file-name="probabilistic_decission_tree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/probabilistic_decission_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
+            <state relative-caret-position="69">
+              <caret line="209" column="32" lean-forward="true" selection-start-line="209" selection-start-column="32" selection-end-line="209" selection-end-column="32" />
               <folding>
                 <element signature="e#99#179#0" expanded="true" />
               </folding>
@@ -113,11 +89,21 @@
       <file leaf-file-name="predictor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/predictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="24" />
+            <state relative-caret-position="609">
+              <caret line="192" column="8" lean-forward="false" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="8" />
               <folding>
                 <element signature="e#99#179#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dictionary.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dictionary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,7 +112,17 @@
         <entry file="file://$PROJECT_DIR$/corpus/00ne_pos.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="291">
-              <caret line="468" column="11" lean-forward="false" selection-start-line="468" selection-start-column="9" selection-end-line="468" selection-end-column="11" />
+              <caret line="757" column="65" lean-forward="false" selection-start-line="757" selection-start-column="63" selection-end-line="757" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="01ne_pos.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/01ne_pos.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="326" column="263" lean-forward="false" selection-start-line="326" selection-start-column="261" selection-end-line="326" selection-end-column="263" />
               <folding />
             </state>
           </provider>
@@ -143,14 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DM</find>
-      <find>DUM</find>
-      <find>।</find>
-      <find>NNp</find>
-      <find>on</find>
-      <find>EM</find>
-      <find>print()</find>
-      <find>data</find>
       <find>extract\</find>
       <find>extract</find>
       <find>j.set_encoder</find>
@@ -162,7 +150,6 @@
       <find>heighest</find>
       <find>labe</find>
       <find>shape</find>
-      <find>हरु</find>
       <find>को</find>
       <find>load</find>
       <find>load_c</find>
@@ -171,8 +158,17 @@
       <find>amb_class</find>
       <find>statistic</find>
       <find>test</find>
-      <find>corp</find>
+      <find>हरु</find>
+      <find>हरू</find>
+      <find>HRU</find>
+      <find>conversion</find>
+      <find>Y</find>
+      <find>YF</find>
+      <find>YQ</find>
+      <find>ले</find>
+      <find>तोकेन</find>
       <find>sente</find>
+      <find>corp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,13 +193,14 @@
         <option value="$PROJECT_DIR$/corpus.py" />
         <option value="$PROJECT_DIR$/analytics.py" />
         <option value="$PROJECT_DIR$/probabilistic_decission_tree.py" />
+        <option value="$PROJECT_DIR$/dictionary.py" />
         <option value="$PROJECT_DIR$/predictor.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="width" value="961" />
+    <option name="width" value="1922" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -349,10 +346,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="961" height="1053" extended-state="4" />
+    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49530762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -389,13 +386,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/corpus/00ne_pos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/number.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -582,13 +572,6 @@
     <entry file="file://$USER_HOME$/Desktop/ai_missionary_cannibals_state_space.py" />
     <entry file="file://$PROJECT_DIR$/main.py" />
     <entry file="file://$PROJECT_DIR$/load_corpus" />
-    <entry file="file://$PROJECT_DIR$/corpus/01ne_pos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="88" lean-forward="false" selection-start-line="13" selection-start-column="88" selection-end-line="13" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/-1247971764/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -612,44 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corpus/00ne_pos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="468" column="11" lean-forward="false" selection-start-line="468" selection-start-column="9" selection-end-line="468" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/naieve_bays.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="42" selection-end-column="9" />
-          <folding>
-            <element signature="e#11#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#11#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corpus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="42" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analytics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -668,11 +613,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#11#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/probalilistic_tagger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="630">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/01ne_pos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="326" column="263" lean-forward="false" selection-start-line="326" selection-start-column="261" selection-end-line="326" selection-end-column="263" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/00ne_pos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="757" column="65" lean-forward="false" selection-start-line="757" selection-start-column="63" selection-end-line="757" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/probabilistic_decission_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="209" column="32" lean-forward="true" selection-start-line="209" selection-start-column="32" selection-end-line="209" selection-end-column="32" />
+          <folding>
+            <element signature="e#99#179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -686,20 +677,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/probabilistic_decission_tree.py">
+    <entry file="file://$PROJECT_DIR$/dictionary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/naieve_bays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="42" selection-end-column="9" />
           <folding>
-            <element signature="e#99#179#0" expanded="true" />
+            <element signature="e#11#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/predictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="24" />
+        <state relative-caret-position="609">
+          <caret line="192" column="8" lean-forward="false" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="8" />
           <folding>
             <element signature="e#99#179#0" expanded="true" />
           </folding>

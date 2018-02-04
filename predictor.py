@@ -6,6 +6,7 @@ import  analytics,corpus
 from  corpus import load_corpus
 import  numpy as np
 import sys
+from dictionary import  conversion
 a = {
 
     "NN":"Common Noun",
@@ -185,15 +186,24 @@ def classify_tokenized_sentence(words,itr = 0):
 
     return labeled_string
 
+def tokenizer(s):
+    words = [x.strip() for x in s.split(" ") if x != ""]
+    words_aug = []
+    for i in words:
+        
+        if "हरू" in i:
+            words_aug.append(i.replace("हरू",""))
+            words_aug.append("हरू")
+        else:
+            words_aug.append(i)
 
+    return  words_aug
 while(True):
     inp =  input("Classifier_Trainned ..Enter a sentence to be classified or type 'exit' to exit \n")
     if inp == "exit":
         exit()
     else:
-        words = [x.strip()  for x in inp.split(" ") if x!=""]
-
-
-        tags_predicted = classify_tokenized_sentence(words,itr=2)
+        words = tokenizer(inp)
+        tags_predicted = classify_tokenized_sentence(words, itr=2)
         for i in range(len(words)):
-            print(words[i] , tags_predicted[i])
+            print(words[i] , conversion[tags_predicted[i]])
