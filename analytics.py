@@ -1,7 +1,5 @@
-import corpus
-def load_analytics():
+def load_analytics(data):
     s = 0
-    data = corpus.load_corpus()
     # print(len(data))
     stat = {}
     #s= 0

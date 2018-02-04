@@ -6,7 +6,11 @@ import  analytics,corpus
 from  corpus import load_corpus
 import  numpy as np
 import sys
+a = {
 
+    "NN":"Common Noun",
+    "NNP":"Proper Noun",
+}
 try:
     TEST = int(sys.argv[1])
 except ValueError:
@@ -182,74 +186,14 @@ def classify_tokenized_sentence(words,itr = 0):
     return labeled_string
 
 
-#Now We Will Do The Testing
-test = corpus.load_corpus(test = TEST,last=True)
-#Error for no iteration
-hit = 0
-miss = 0
-
-for i in test:
-    sentence = [j[0] for j in i]
-    tags_true = [j[1] for j in i]
-    tags_predicted = classify_tokenized_sentence(sentence)
-    for i in range(len(tags_true)):
-        if tags_true[i] == tags_predicted[i]:
-            hit+=1
-        else:
-            miss+=1
-
-print("Accuracy for probalistic tagger", hit/(hit+miss))
+while(True):
+    inp =  input("Classifier_Trainned ..Enter a sentence to be classified or type 'exit' to exit \n")
+    if inp == "exit":
+        exit()
+    else:
+        words = [x.strip()  for x in inp.split(" ") if x!=""]
 
 
-
-#Error for 1 iteration
-hit = 0
-miss = 0
-
-for i in test:
-    sentence = [j[0] for j in i]
-    tags_true = [j[1] for j in i]
-    tags_predicted = classify_tokenized_sentence(sentence,1)
-    for i in range(len(tags_true)):
-        if tags_true[i] == tags_predicted[i]:
-            hit+=1
-        else:
-            miss+=1
-
-print("Accuracy for 1 iteration of decission tree", hit/(hit+miss))
-
-
-#Error for 2 iteration
-hit = 0
-miss = 0
-
-for i in test:
-    sentence = [j[0] for j in i]
-    tags_true = [j[1] for j in i]
-    tags_predicted = classify_tokenized_sentence(sentence,2)
-    for i in range(len(tags_true)):
-        if tags_true[i] == tags_predicted[i]:
-            hit+=1
-        else:
-            miss+=1
-
-print("Accuracy  for 2 iteration of decission tree", hit/(hit+miss))
-
-
-
-#Error for 3 iteration
-hit = 0
-miss = 0
-
-for i in test:
-    sentence = [j[0] for j in i]
-    tags_true = [j[1] for j in i]
-    tags_predicted = classify_tokenized_sentence(sentence,3)
-    for i in range(len(tags_true)):
-        if tags_true[i] == tags_predicted[i]:
-            hit+=1
-        else:
-            miss+=1
-
-print("Accuracy  for 3 iteration of decission tree", hit/(hit+miss))
-
+        tags_predicted = classify_tokenized_sentence(words,itr=2)
+        for i in range(len(words)):
+            print(words[i] , tags_predicted[i])
