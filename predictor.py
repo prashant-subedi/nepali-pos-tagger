@@ -7,18 +7,6 @@ from  corpus import load_corpus
 import  numpy as np
 import sys
 from dictionary import  conversion
-a = {
-
-    "NN":"Common Noun",
-    "NNP":"Proper Noun",
-}
-try:
-    TEST = int(sys.argv[1])
-except ValueError:
-    print("Enter 0,1,2 to specify testing document")
-    exit()
-except IndexError:
-    TEST = 2
 class AmbigiousClass:
     def __init__(self,name):
         self.name = name
