@@ -125,5 +125,5 @@ heighest_probabilty_pkl.close()
 
 global_clf_pkl = open("data/global_clf.pkl","wb")
 pickle.dump(global_clf,global_clf_pkl)
-
+global_clf_pkl.close()
 
