@@ -10,3 +10,6 @@ We used statistical tagger to tag words which were found to be of a single class
 
 Team Members : Prashant Subedi & Bibek Pokhrel.<br>
 DataSet being used:  http://cle.org.pk/software/ling_resources/UrduNepaliEnglishParallelCorpus.htm
+
+1. To train the model execute "predictor.py"<br>
+2. To run conversion execute "tagger.py"<br>
