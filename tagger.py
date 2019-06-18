@@ -89,21 +89,23 @@ def tokenizer(s):
         else:
             words_aug.append(i)
 
-    return  words_aug
+    return words_aug
+
 import sys
 if len(sys.argv) <2:
 	print("Enter File to Be Tagged")
 
-try:	
-	with open(sys.argv[1]) as inp:
-		lines = inp.read().split("।")
-		lines = [i+"।" for i in lines]
-		converted = ""
-		for i in lines:
-			words= tokenizer(i)
-			op = classify_tokenized_sentence(words,3)
-			converted += " ".join([i[0] +"<" + i[1]+">" for i in zip(words,op)])
+try:
+    with open(sys.argv[1]) as inp:
+        lines = inp.read().split("।")
+        lines = [i+"।" for i in lines]
+        converted = ""
+        for i in lines:
+            words= tokenizer(i)
+            op = classify_tokenized_sentence(words,3)
+            converted += " ".join([i[0] +"<" + i[1]+">" for i in zip(words,op)])
 except FileNotFoundError:
-	print("Enter a valid file name")			
+    print("Enter a valid file name")
+
 with open("converted_"+sys.argv[1],"w") as op:
 	op.write(converted)

@@ -6,12 +6,11 @@ class AmbigiousClass:
         self.Y = []
         self.word_list =  set()
 
-    def set_encoders(self,le,oh):
+    def set_encoders(self, le, oh):
         self.label_encoder = le
         self.onehot_encoder = oh
 
     def get_encoder(self):
-        #This encoder is only for Y values, encode X using a global encoder
         return self.label_encoder, self.onehot_encoder
 
     def add_XY(self,X,Y):
@@ -36,4 +35,3 @@ class AmbigiousClass:
     def __str__(self):
         return "".join(self.word_list)
 
-    #def get_
